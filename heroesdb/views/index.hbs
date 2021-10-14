@@ -1,0 +1,49 @@
+{{>head}}
+{{>navbar}}
+<div class="container">
+    <div class="row hero-card" style="margin-top: 50px;">
+        {{#each heroes}}
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="/uploads/{{this.photo}}" class="card-img-top img-fluid" alt="product">
+                <div class="card-body">
+                    <a href="/hero/{{this.id}}" style="text-decoration: none; color: black">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text">type: {{this.type_id}}</p>
+                    </a>
+                    <div class="text-end mb-2">
+                        <a href="/hero/{{this.id}}" class="btn btn-warning">Detail</a>
+                    </div>
+                    <div class="text-end mb-2">
+                        <a href="/edit/{{this.id}}" class="btn btn-primary">Edit</a>
+                        <a href="/delete/{{this.id}}" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="row hero-card" style="margin-top: 50px;">
+        {{!-- {{#each heroes}} --}}
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="/uploads/1634192541479-Estes.jpg" class="card-img-top img-fluid" alt="product">
+                <div class="card-body">
+                    <a href="/hero/{{this.id}}" style="text-decoration: none; color: black">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text">type: {{this.type_id}}</p>
+                    </a>
+                    <div class="text-end mb-2">
+                        <a href="/hero/{{this.id}}" class="btn btn-warning">Detail</a>
+                    </div>
+                    <div class="text-end mb-2">
+                        <a href="/edit/{{this.id}}" class="btn btn-primary">Edit</a>
+                        <a href="/delete/{{this.id}}" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- {{/each}} --}}
+    </div>
+</div>
